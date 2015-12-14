@@ -1,6 +1,6 @@
 # Project stub with Angular, SASS, BEM CSS and BEM file model
 
-This is a stub project on Angular+React+ebpack. Uses modular approach and BEM file model.
+This is a stub project on Angular+React+Webpack. Uses modular approach and BEM file model.
 ## Installation
 
 ```
