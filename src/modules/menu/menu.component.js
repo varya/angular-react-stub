@@ -4,8 +4,14 @@ import angular from 'angular';
 export default class Menu extends Component {
 
   render() {
+
+    var menu = this.props.items.map((item) => {
+        return (
+          <li><a href={item.link}>{item.name}</a></li>
+        )
+    });
     return (
-      <span>Hello Murzik! {this.props.name} {this.props.surname}</span>
+      <ul>{menu}</ul>
     )
   }
 }
