@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import angular from 'angular';
+
+import styles from './menu.css';
 
 export default class Menu extends Component {
 
