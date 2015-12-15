@@ -7,12 +7,13 @@ export default class Menu extends Component {
   render() {
 
     var menu = this.props.items.map((item) => {
+        const itemKey = 'Menu' + item.id;
         return (
-          <li><a href={item.link}>{item.name}</a></li>
+          <li key={itemKey}><a href={item.link}>{item.name}</a></li>
         )
     });
     return (
-      <ul>{menu}</ul>
+      <ul key="Menu">{menu}</ul>
     )
   }
 }
