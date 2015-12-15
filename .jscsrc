@@ -2,10 +2,11 @@
   "preset": "airbnb",
 
   "validateIndentation": 2,
-  "requireMultipleVarDecl": true,
+  "requireMultipleVarDecl": false,
 
   "excludeFiles": [
     "node_modules/**",
-    "*.js"
+    "build/**",
+    "*.js",
   ]
 }
