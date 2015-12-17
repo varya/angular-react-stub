@@ -1,4 +1,6 @@
+$fontSize: 34px;
+
 li
 {
-    font-size: 32px;
+    font-size: $fontSize;
 }

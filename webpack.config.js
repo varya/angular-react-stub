@@ -8,14 +8,20 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/static/'
   },
+  clean: {
+    react : ['node_modules/**/react','!node_modules/react']
+  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ],
+  resolve: {
+    extensions: ['', '.jsx', '.scss', '.js', '.json']
+  },
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         loaders: [
           'babel-loader',
           'ng-annotate-loader'
@@ -28,9 +34,20 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loaders: ['style-loader', 'css-loader']
+        loaders: ['style-loader', 'css-loader', 'postcss-loader']
+      },
+      {
+        test: /\.scss$/,
+        loaders: [
+          'style-loader',
+          require.resolve('css-loader') + '?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]',
+          'sass-loader'
+        ]
       }
     ]
+  },
+  postcss: function () {
+    return [require('precss')];
   }
 };
 
