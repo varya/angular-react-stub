@@ -1,6 +1,6 @@
 # Project stub
 
-This is a single page application (SAP) on Angular + React.
+This is a single page application (SPA) on Angular + React.
 
 
 ## Installation
